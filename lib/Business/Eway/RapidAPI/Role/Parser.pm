@@ -1,0 +1,91 @@
+package Business::Eway::RapidAPI::Role::Parser;
+{
+    $Business::Eway::RapidAPI::Role::Parser::VERSION = '0.01';
+}
+
+use Moo::Role;
+
+use JSON -convert_blessed_universally;
+use XML::Simple;
+
+sub Obj2ARRAY {
+    my ( $self, $obj ) = @_;
+
+    my $json = JSON->new();
+    $json->pretty();
+    $json->allow_blessed()->convert_blessed();
+    return $json->decode( $json->encode($obj) );
+}
+
+sub Obj2JSON {
+    my ( $self, $obj ) = @_;
+
+    my $json = JSON->new();
+    $json->pretty();
+    $json->allow_blessed()->convert_blessed();
+    return $json->encode($obj);
+}
+
+sub JSON2Obj {
+    my ( $self, $obj ) = @_;
+
+    my $json = new JSON();
+    $json->allow_blessed()->convert_blessed();
+    return $json->decode($obj);
+}
+
+sub Obj2XML {
+    my ( $self, $obj, $reqname ) = @_;
+
+    my $xs = XML::Simple->new(
+        GroupTags     => { 'Items' => 'LineItem', 'Options' => 'Option' },
+        SuppressEmpty => 1
+    );
+    return $xs->XMLout(
+        $obj,
+        KeepRoot => 0,
+        XMLDecl  => 1,
+        NoAttr   => 1,
+        RootName => $reqname
+    );
+}
+
+sub XML2Obj {
+    my ( $self, $obj ) = @_;
+
+    my $xs = XML::Simple->new( SuppressEmpty => 1 );
+
+    return $xs->XMLin(
+        $obj,
+        ForceArray   => [ 'Items', 'Options' ],
+        KeepRoot     => 0,
+        ForceContent => 0
+    );
+}
+
+1;
+
+__END__
+
+=pod
+
+=head1 NAME
+
+Business::Eway::RapidAPI::Role::Parser
+
+=head1 VERSION
+
+version 0.01
+
+=head1 AUTHOR
+
+Fayland Lam <fayland@gmail.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Fayland Lam.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
