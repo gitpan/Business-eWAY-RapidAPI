@@ -1,6 +1,6 @@
-package Business::Eway::RapidAPI::GetAccessCodeResultRequest;
+package Business::eWAY::RapidAPI::GetAccessCodeResultRequest;
 {
-    $Business::Eway::RapidAPI::GetAccessCodeResultRequest::VERSION = '0.01';
+    $Business::eWAY::RapidAPI::GetAccessCodeResultRequest::VERSION = '0.02';
 }
 
 use Moo;
@@ -16,11 +16,11 @@ __END__
 
 =head1 NAME
 
-Business::Eway::RapidAPI::GetAccessCodeResultRequest
+Business::eWAY::RapidAPI::GetAccessCodeResultRequest
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHOR
 

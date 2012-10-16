@@ -1,6 +1,6 @@
-package Business::Eway::RapidAPI::Role::Parser;
+package Business::eWAY::RapidAPI::Role::Parser;
 {
-    $Business::Eway::RapidAPI::Role::Parser::VERSION = '0.01';
+    $Business::eWAY::RapidAPI::Role::Parser::VERSION = '0.02';
 }
 
 use Moo::Role;
@@ -71,11 +71,11 @@ __END__
 
 =head1 NAME
 
-Business::Eway::RapidAPI::Role::Parser
+Business::eWAY::RapidAPI::Role::Parser
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHOR
 

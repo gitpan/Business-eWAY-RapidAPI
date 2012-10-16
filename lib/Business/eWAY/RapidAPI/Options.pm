@@ -1,6 +1,6 @@
-package Business::Eway::RapidAPI::Options;
+package Business::eWAY::RapidAPI::Options;
 {
-    $Business::Eway::RapidAPI::Options::VERSION = '0.01';
+    $Business::eWAY::RapidAPI::Options::VERSION = '0.02';
 }
 
 use Moo;
@@ -8,12 +8,12 @@ use MooX::Types::MooseLike::Base qw(:all);
 
 has 'Option' => (
     is  => 'rw',
-    isa => ArrayRef [ InstanceOf ['Business::Eway::RapidAPI::Option'] ],
+    isa => ArrayRef [ InstanceOf ['Business::eWAY::RapidAPI::Option'] ],
     default => sub { [] }
 );
 
 package    # hidden from PAUSE
-  Business::Eway::RapidAPI::Option;
+  Business::eWAY::RapidAPI::Option;
 
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
@@ -28,11 +28,11 @@ __END__
 
 =head1 NAME
 
-Business::Eway::RapidAPI::Options
+Business::eWAY::RapidAPI::Options
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHOR
 

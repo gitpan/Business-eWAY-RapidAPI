@@ -1,6 +1,6 @@
-package Business::Eway::RapidAPI::Items;
+package Business::eWAY::RapidAPI::Items;
 {
-    $Business::Eway::RapidAPI::Items::VERSION = '0.01';
+    $Business::eWAY::RapidAPI::Items::VERSION = '0.02';
 }
 
 use Moo;
@@ -8,12 +8,12 @@ use MooX::Types::MooseLike::Base qw(:all);
 
 has 'LineItem' => (
     is  => 'rw',
-    isa => ArrayRef [ InstanceOf ['Business::Eway::RapidAPI::LineItem'] ],
+    isa => ArrayRef [ InstanceOf ['Business::eWAY::RapidAPI::LineItem'] ],
     default => sub { [] }
 );
 
 package    # hidden from PAUSE
-  Business::Eway::RapidAPI::LineItem;
+  Business::eWAY::RapidAPI::LineItem;
 
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
@@ -31,11 +31,11 @@ __END__
 
 =head1 NAME
 
-Business::Eway::RapidAPI::Items
+Business::eWAY::RapidAPI::Items
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHOR
 

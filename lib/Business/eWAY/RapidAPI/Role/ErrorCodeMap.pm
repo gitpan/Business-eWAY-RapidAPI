@@ -1,6 +1,6 @@
-package Business::Eway::RapidAPI::Role::ErrorCodeMap;
+package Business::eWAY::RapidAPI::Role::ErrorCodeMap;
 {
-    $Business::Eway::RapidAPI::Role::ErrorCodeMap::VERSION = '0.01';
+    $Business::eWAY::RapidAPI::Role::ErrorCodeMap::VERSION = '0.02';
 }
 
 use Moo::Role;
@@ -176,11 +176,11 @@ __END__
 
 =head1 NAME
 
-Business::Eway::RapidAPI::Role::ErrorCodeMap
+Business::eWAY::RapidAPI::Role::ErrorCodeMap
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHOR
 

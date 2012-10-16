@@ -1,6 +1,6 @@
-package Business::Eway::RapidAPI::Customer;
+package Business::eWAY::RapidAPI::Customer;
 {
-    $Business::Eway::RapidAPI::Customer::VERSION = '0.01';
+    $Business::eWAY::RapidAPI::Customer::VERSION = '0.02';
 }
 
 use Moo;
@@ -26,11 +26,11 @@ __END__
 
 =head1 NAME
 
-Business::Eway::RapidAPI::Customer
+Business::eWAY::RapidAPI::Customer
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHOR
 

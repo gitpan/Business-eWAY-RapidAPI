@@ -1,15 +1,14 @@
-package Business::Eway::RapidAPI::ShippingAddress;
+package Business::eWAY::RapidAPI::Payment;
 {
-    $Business::Eway::RapidAPI::ShippingAddress::VERSION = '0.01';
+    $Business::eWAY::RapidAPI::Payment::VERSION = '0.02';
 }
 
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
 has $_ => ( is => 'rw', isa => Str ) foreach (
-    'ShippingMethod', 'FirstName', 'LastName', 'Street1',
-    'Street2',        'City',      'State',    'PostalCode',
-    'Country',        'Email',     'Phone',    'Fax'
+    'TotalAmount',      'InvoiceNumber', 'InvoiceDescription',
+    'InvoiceReference', 'CurrencyCode'
 );
 
 1;
@@ -20,11 +19,11 @@ __END__
 
 =head1 NAME
 
-Business::Eway::RapidAPI::ShippingAddress
+Business::eWAY::RapidAPI::Payment
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHOR
 
