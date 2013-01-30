@@ -1,10 +1,10 @@
 {
-   "abstract" : "PunchTab REST API",
+   "abstract" : "eWAY RapidAPI V3",
    "author" : [
       "Fayland Lam <fayland@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300026, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -41,9 +41,9 @@
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/fayland/p5-Business-eWAY-RapidAPI.git",
-         "web" : "http://github.com/fayland/p5-Business-eWAY-RapidAPI"
+         "web" : "https://github.com/fayland/p5-Business-eWAY-RapidAPI"
       }
    },
-   "version" : "0.02"
+   "version" : "0.03"
 }
 

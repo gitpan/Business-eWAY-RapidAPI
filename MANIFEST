@@ -4,7 +4,6 @@ MANIFEST
 META.json
 META.yml
 Makefile.PL
-README.md
 dist.ini
 examples/CreateAccessCode.pl
 examples/web/Images/companylogo.gif

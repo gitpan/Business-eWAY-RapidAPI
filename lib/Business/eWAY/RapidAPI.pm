@@ -1,9 +1,9 @@
 package Business::eWAY::RapidAPI;
 {
-    $Business::eWAY::RapidAPI::VERSION = '0.02';
+    $Business::eWAY::RapidAPI::VERSION = '0.03';
 }
 
-# ABSTRACT: PunchTab REST API
+# ABSTRACT: eWAY RapidAPI V3
 
 use Moo;
 use Business::eWAY::RapidAPI::CreateAccessCodeRequest;
@@ -313,11 +313,11 @@ __END__
 
 =head1 NAME
 
-Business::eWAY::RapidAPI - PunchTab REST API
+Business::eWAY::RapidAPI - eWAY RapidAPI V3
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -487,7 +487,7 @@ Fayland Lam <fayland@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Fayland Lam.
+This software is copyright (c) 2013 by Fayland Lam.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

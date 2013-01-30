@@ -1,6 +1,6 @@
 package Business::eWAY::RapidAPI::Role::Parser;
 {
-    $Business::eWAY::RapidAPI::Role::Parser::VERSION = '0.02';
+    $Business::eWAY::RapidAPI::Role::Parser::VERSION = '0.03';
 }
 
 use Moo::Role;
@@ -75,7 +75,7 @@ Business::eWAY::RapidAPI::Role::Parser
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 AUTHOR
 
@@ -83,7 +83,7 @@ Fayland Lam <fayland@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Fayland Lam.
+This software is copyright (c) 2013 by Fayland Lam.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
