@@ -1,6 +1,6 @@
 package Business::eWAY::RapidAPI::Options;
 {
-    $Business::eWAY::RapidAPI::Options::VERSION = '0.03';
+    $Business::eWAY::RapidAPI::Options::VERSION = '0.04';
 }
 
 use Moo;
@@ -16,7 +16,7 @@ package    # hidden from PAUSE
   Business::eWAY::RapidAPI::Option;
 
 use Moo;
-use MooX::Types::MooseLike::Base qw(:all);
+use MooX::Types::MooseLike::Base 'Str';
 
 has 'Value' => ( is => 'rw', isa => Str );
 
@@ -32,7 +32,7 @@ Business::eWAY::RapidAPI::Options
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 AUTHOR
 

@@ -26,7 +26,7 @@ my %WriteMakefileArgs = (
     "WWW::Mechanize" => 0,
     "XML::Simple" => 0
   },
-  "VERSION" => "0.03",
+  "VERSION" => "0.04",
   "test" => {
     "TESTS" => "t/*.t"
   }

@@ -1,6 +1,6 @@
 package Business::eWAY::RapidAPI::Payment;
 {
-    $Business::eWAY::RapidAPI::Payment::VERSION = '0.03';
+    $Business::eWAY::RapidAPI::Payment::VERSION = '0.04';
 }
 
 use Moo;
@@ -23,7 +23,7 @@ Business::eWAY::RapidAPI::Payment
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 AUTHOR
 

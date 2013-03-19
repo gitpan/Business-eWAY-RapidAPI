@@ -4,6 +4,7 @@ MANIFEST
 META.json
 META.yml
 Makefile.PL
+README
 dist.ini
 examples/CreateAccessCode.pl
 examples/web/Images/companylogo.gif
@@ -48,6 +49,7 @@ lib/Business/eWAY/RapidAPI/Payment.pm
 lib/Business/eWAY/RapidAPI/Role/ErrorCodeMap.pm
 lib/Business/eWAY/RapidAPI/Role/Parser.pm
 lib/Business/eWAY/RapidAPI/ShippingAddress.pm
+perltidy.LOG
 t/00-compile.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t

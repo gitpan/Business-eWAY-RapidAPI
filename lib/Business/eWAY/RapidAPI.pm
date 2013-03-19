@@ -1,6 +1,6 @@
 package Business::eWAY::RapidAPI;
 {
-    $Business::eWAY::RapidAPI::VERSION = '0.03';
+    $Business::eWAY::RapidAPI::VERSION = '0.04';
 }
 
 # ABSTRACT: eWAY RapidAPI V3
@@ -317,7 +317,7 @@ Business::eWAY::RapidAPI - eWAY RapidAPI V3
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 

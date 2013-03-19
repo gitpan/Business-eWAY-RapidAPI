@@ -1,6 +1,6 @@
 package Business::eWAY::RapidAPI::ShippingAddress;
 {
-    $Business::eWAY::RapidAPI::ShippingAddress::VERSION = '0.03';
+    $Business::eWAY::RapidAPI::ShippingAddress::VERSION = '0.04';
 }
 
 use Moo;
@@ -24,7 +24,7 @@ Business::eWAY::RapidAPI::ShippingAddress
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 AUTHOR
 
