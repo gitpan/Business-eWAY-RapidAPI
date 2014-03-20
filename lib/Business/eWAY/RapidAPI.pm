@@ -1,7 +1,5 @@
 package Business::eWAY::RapidAPI;
-{
-    $Business::eWAY::RapidAPI::VERSION = '0.04';
-}
+$Business::eWAY::RapidAPI::VERSION = '0.05';
 
 # ABSTRACT: eWAY RapidAPI V3
 
@@ -10,6 +8,7 @@ use Business::eWAY::RapidAPI::CreateAccessCodeRequest;
 use Business::eWAY::RapidAPI::GetAccessCodeResultRequest;
 use Data::Dumper;
 use WWW::Mechanize;
+use IO::Socket::SSL qw( SSL_VERIFY_NONE );
 
 with 'Business::eWAY::RapidAPI::Role::Parser';
 with 'Business::eWAY::RapidAPI::Role::ErrorCodeMap';
@@ -70,7 +69,10 @@ sub _build_ua {
         timeout     => 60,
         autocheck   => 0,
         stack_depth => 1,
-        ssl_opts    => { verify_hostname => 0 }
+        ssl_opts    => {
+            verify_hostname => 0,
+            SSL_verify_mode => SSL_VERIFY_NONE,    # BAD
+        }
     );
 }
 
@@ -311,13 +313,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Business::eWAY::RapidAPI - eWAY RapidAPI V3
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -487,7 +491,7 @@ Fayland Lam <fayland@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Fayland Lam.
+This software is copyright (c) 2014 by Fayland Lam.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
