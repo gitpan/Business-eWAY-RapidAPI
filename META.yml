@@ -17,6 +17,7 @@ meta-spec:
   version: 1.4
 name: Business-eWAY-RapidAPI
 requires:
+  IO::Socket::SSL: 0
   JSON: 0
   Moo: 0
   MooX::Types::MooseLike: 0
@@ -24,4 +25,4 @@ requires:
   XML::Simple: 0
 resources:
   repository: git://github.com/fayland/p5-Business-eWAY-RapidAPI.git
-version: 0.05
+version: 0.06

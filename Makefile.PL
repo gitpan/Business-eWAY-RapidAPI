@@ -21,6 +21,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Business::eWAY::RapidAPI",
   "PREREQ_PM" => {
+    "IO::Socket::SSL" => 0,
     "JSON" => 0,
     "Moo" => 0,
     "MooX::Types::MooseLike" => 0,
@@ -33,7 +34,7 @@ my %WriteMakefileArgs = (
     "IPC::Open3" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.05",
+  "VERSION" => "0.06",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -43,6 +44,7 @@ my %WriteMakefileArgs = (
 my %FallbackPrereqs = (
   "File::Spec" => 0,
   "IO::Handle" => 0,
+  "IO::Socket::SSL" => 0,
   "IPC::Open3" => 0,
   "JSON" => 0,
   "Moo" => 0,

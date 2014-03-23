@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::GetAccessCodeResultRequest;
-$Business::eWAY::RapidAPI::GetAccessCodeResultRequest::VERSION = '0.05';
+$Business::eWAY::RapidAPI::GetAccessCodeResultRequest::VERSION = '0.06';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
@@ -19,7 +19,7 @@ Business::eWAY::RapidAPI::GetAccessCodeResultRequest
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 AUTHOR
 
