@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::Customer;
-$Business::eWAY::RapidAPI::Customer::VERSION = '0.07';
+$Business::eWAY::RapidAPI::Customer::VERSION = '0.08';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
@@ -27,7 +27,7 @@ Business::eWAY::RapidAPI::Customer
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 AUTHOR
 

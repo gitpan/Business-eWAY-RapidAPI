@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::CardCustomer;
-$Business::eWAY::RapidAPI::CardCustomer::VERSION = '0.07';
+$Business::eWAY::RapidAPI::CardCustomer::VERSION = '0.08';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 use Business::eWAY::RapidAPI::CardDetails;
@@ -26,7 +26,7 @@ Business::eWAY::RapidAPI::CardCustomer
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 AUTHOR
 
