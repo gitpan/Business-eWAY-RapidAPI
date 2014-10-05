@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::Role::ErrorCodeMap;
-$Business::eWAY::RapidAPI::Role::ErrorCodeMap::VERSION = '0.06';
+$Business::eWAY::RapidAPI::Role::ErrorCodeMap::VERSION = '0.07';
 use Moo::Role;
 
 my %codemap = (
@@ -165,6 +165,8 @@ sub ErrorsToString {
     return $lblError;
 }
 
+no Moo::Role;
+
 1;
 
 __END__
@@ -179,7 +181,7 @@ Business::eWAY::RapidAPI::Role::ErrorCodeMap
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 AUTHOR
 

@@ -4,10 +4,12 @@ use warnings;
 
 # this test was generated with Dist::Zilla::Plugin::Test::Compile 2.039
 
-use Test::More tests => 10 + ( $ENV{AUTHOR_TESTING} ? 1 : 0 );
+use Test::More tests => 13 + ( $ENV{AUTHOR_TESTING} ? 1 : 0 );
 
 my @module_files = (
     'Business/eWAY/RapidAPI.pm',
+    'Business/eWAY/RapidAPI/CardCustomer.pm',
+    'Business/eWAY/RapidAPI/CardDetails.pm',
     'Business/eWAY/RapidAPI/CreateAccessCodeRequest.pm',
     'Business/eWAY/RapidAPI/Customer.pm',
     'Business/eWAY/RapidAPI/GetAccessCodeResultRequest.pm',
@@ -16,7 +18,8 @@ my @module_files = (
     'Business/eWAY/RapidAPI/Payment.pm',
     'Business/eWAY/RapidAPI/Role/ErrorCodeMap.pm',
     'Business/eWAY/RapidAPI/Role/Parser.pm',
-    'Business/eWAY/RapidAPI/ShippingAddress.pm'
+    'Business/eWAY/RapidAPI/ShippingAddress.pm',
+    'Business/eWAY/RapidAPI/TransactionRequest.pm'
 );
 
 # no fake home requested

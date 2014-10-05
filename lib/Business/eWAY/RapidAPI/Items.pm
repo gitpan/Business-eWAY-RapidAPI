@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::Items;
-$Business::eWAY::RapidAPI::Items::VERSION = '0.06';
+$Business::eWAY::RapidAPI::Items::VERSION = '0.07';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
@@ -8,6 +8,8 @@ has 'LineItem' => (
     isa => ArrayRef [ InstanceOf ['Business::eWAY::RapidAPI::LineItem'] ],
     default => sub { [] }
 );
+
+no Moo;
 
 package    # hidden from PAUSE
   Business::eWAY::RapidAPI::LineItem;
@@ -18,7 +20,7 @@ use MooX::Types::MooseLike::Base qw(:all);
 has $_ => ( is => 'rw', isa => Str )
   foreach ( 'SKU', 'Description', 'Quantity', 'UnitCost', 'Tax', 'Total' );
 
-1;
+no Moo;
 
 1;
 
@@ -34,7 +36,7 @@ Business::eWAY::RapidAPI::Items
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 AUTHOR
 

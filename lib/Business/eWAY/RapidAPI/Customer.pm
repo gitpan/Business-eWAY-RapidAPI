@@ -1,19 +1,17 @@
 package Business::eWAY::RapidAPI::Customer;
-$Business::eWAY::RapidAPI::Customer::VERSION = '0.06';
+$Business::eWAY::RapidAPI::Customer::VERSION = '0.07';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
 has $_ => ( is => 'rw', isa => Str ) foreach (
-    'TokenCustomerID', 'Reference',      'Title',
-    'FirstName',       'LastName',       'CompanyName',
-    'JobDescription',  'Street1',        'Street2',
-    'City',            'State',          'PostalCode',
-    'Country',         'Email',          'Phone',
-    'Mobile',          'Comments',       'Fax',
-    'Url',             'CardNumber',     'CardName',
-    'CardExpiryMonth', 'CardExpiryYear', 'CardStartMonth',
-    'CardStartYear',   'CardIssueNumber'
+    'TokenCustomerID', 'Reference',   'Title',          'FirstName',
+    'LastName',        'CompanyName', 'JobDescription', 'Street1',
+    'Street2',         'City',        'State',          'PostalCode',
+    'Country',         'Email',       'Phone',          'Mobile',
+    'Comments',        'Fax',         'Url'
 );
+
+no Moo;
 
 1;
 
@@ -29,7 +27,7 @@ Business::eWAY::RapidAPI::Customer
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 AUTHOR
 

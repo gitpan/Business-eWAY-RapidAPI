@@ -1,12 +1,14 @@
-package Business::eWAY::RapidAPI::Payment;
-$Business::eWAY::RapidAPI::Payment::VERSION = '0.07';
+package Business::eWAY::RapidAPI::CardCustomer;
+$Business::eWAY::RapidAPI::CardCustomer::VERSION = '0.07';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
+use Business::eWAY::RapidAPI::CardDetails;
 
-has $_ => ( is => 'rw', isa => Str ) foreach (
-    'TotalAmount',      'InvoiceNumber', 'InvoiceDescription',
-    'InvoiceReference', 'CurrencyCode'
-);
+extends 'Business::eWAY::RapidAPI::Customer';
+
+has 'CardDetails' =>
+  ( is => 'lazy', isa => InstanceOf ['Business::eWAY::RapidAPI::CardDetails'] );
+sub _build_CardDetails { Business::eWAY::RapidAPI::CardDetails->new }
 
 no Moo;
 
@@ -20,7 +22,7 @@ __END__
 
 =head1 NAME
 
-Business::eWAY::RapidAPI::Payment
+Business::eWAY::RapidAPI::CardCustomer
 
 =head1 VERSION
 

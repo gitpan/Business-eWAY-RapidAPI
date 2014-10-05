@@ -8,6 +8,7 @@ Makefile.PL
 README
 dist.ini
 examples/CreateAccessCode.pl
+examples/Transaction.pl
 examples/web/Images/companylogo.gif
 examples/web/Images/cross.gif
 examples/web/Images/footheadbg.gif
@@ -41,6 +42,8 @@ examples/web/cgi-bin/default.pl
 examples/web/cgi-bin/payment.pl
 examples/web/cgi-bin/results.pl
 lib/Business/eWAY/RapidAPI.pm
+lib/Business/eWAY/RapidAPI/CardCustomer.pm
+lib/Business/eWAY/RapidAPI/CardDetails.pm
 lib/Business/eWAY/RapidAPI/CreateAccessCodeRequest.pm
 lib/Business/eWAY/RapidAPI/Customer.pm
 lib/Business/eWAY/RapidAPI/GetAccessCodeResultRequest.pm
@@ -50,6 +53,7 @@ lib/Business/eWAY/RapidAPI/Payment.pm
 lib/Business/eWAY/RapidAPI/Role/ErrorCodeMap.pm
 lib/Business/eWAY/RapidAPI/Role/Parser.pm
 lib/Business/eWAY/RapidAPI/ShippingAddress.pm
+lib/Business/eWAY/RapidAPI/TransactionRequest.pm
 perltidy.LOG
 t/00-compile.t
 t/release-pod-coverage.t

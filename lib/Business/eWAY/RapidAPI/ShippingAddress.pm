@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::ShippingAddress;
-$Business::eWAY::RapidAPI::ShippingAddress::VERSION = '0.06';
+$Business::eWAY::RapidAPI::ShippingAddress::VERSION = '0.07';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
@@ -8,6 +8,8 @@ has $_ => ( is => 'rw', isa => Str ) foreach (
     'Street2',        'City',      'State',    'PostalCode',
     'Country',        'Email',     'Phone',    'Fax'
 );
+
+no Moo;
 
 1;
 
@@ -23,7 +25,7 @@ Business::eWAY::RapidAPI::ShippingAddress
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 AUTHOR
 

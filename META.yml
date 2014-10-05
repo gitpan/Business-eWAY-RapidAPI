@@ -25,4 +25,4 @@ requires:
   XML::Simple: 0
 resources:
   repository: git://github.com/fayland/p5-Business-eWAY-RapidAPI.git
-version: 0.06
+version: 0.07

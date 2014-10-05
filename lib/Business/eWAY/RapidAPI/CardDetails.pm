@@ -1,11 +1,11 @@
-package Business::eWAY::RapidAPI::Payment;
-$Business::eWAY::RapidAPI::Payment::VERSION = '0.07';
+package Business::eWAY::RapidAPI::CardDetails;
+$Business::eWAY::RapidAPI::CardDetails::VERSION = '0.07';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
 has $_ => ( is => 'rw', isa => Str ) foreach (
-    'TotalAmount',      'InvoiceNumber', 'InvoiceDescription',
-    'InvoiceReference', 'CurrencyCode'
+    'Name',       'Number',    'ExpiryMonth', 'ExpiryYear',
+    'StartMonth', 'StartYear', 'IssueNumber', 'CVN'
 );
 
 no Moo;
@@ -20,7 +20,7 @@ __END__
 
 =head1 NAME
 
-Business::eWAY::RapidAPI::Payment
+Business::eWAY::RapidAPI::CardDetails
 
 =head1 VERSION
 
