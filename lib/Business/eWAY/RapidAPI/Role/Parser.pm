@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::Role::Parser;
-$Business::eWAY::RapidAPI::Role::Parser::VERSION = '0.09';
+$Business::eWAY::RapidAPI::Role::Parser::VERSION = '0.10';
 use Moo::Role;
 
 use JSON -convert_blessed_universally;
@@ -76,7 +76,7 @@ Business::eWAY::RapidAPI::Role::Parser
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 AUTHOR
 

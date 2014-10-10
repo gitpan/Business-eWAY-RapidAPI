@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI;
-$Business::eWAY::RapidAPI::VERSION = '0.09';
+$Business::eWAY::RapidAPI::VERSION = '0.10';
 
 # ABSTRACT: eWAY RapidAPI V3
 
@@ -391,10 +391,14 @@ sub PostToRapidAPI {
     }
 
     unless ( $resp->is_success ) {
-        return {
-            TransactionStatus => 0,
-            ResponseMessage   => $resp->status_line
-        };
+        my $r =
+          { TransactionStatus => 0, ResponseMessage => $resp->status_line };
+        if ( $Request_Format eq 'XML' ) {
+            return $self->Obj2XML( $r, 'Error' );
+        }
+        else {
+            return $self->Obj2JSON($r);
+        }
 
 # print '<h2>POST Error: ' . $resp->status_line . ' URL: ' . $url. ' </h2> <pre>';
 # die Dumper(\$resp);
@@ -419,7 +423,7 @@ Business::eWAY::RapidAPI - eWAY RapidAPI V3
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 SYNOPSIS
 

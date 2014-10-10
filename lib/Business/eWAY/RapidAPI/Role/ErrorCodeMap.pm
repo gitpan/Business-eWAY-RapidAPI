@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::Role::ErrorCodeMap;
-$Business::eWAY::RapidAPI::Role::ErrorCodeMap::VERSION = '0.09';
+$Business::eWAY::RapidAPI::Role::ErrorCodeMap::VERSION = '0.10';
 use Moo::Role;
 
 my %codemap = (
@@ -256,7 +256,7 @@ Business::eWAY::RapidAPI::Role::ErrorCodeMap
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 AUTHOR
 

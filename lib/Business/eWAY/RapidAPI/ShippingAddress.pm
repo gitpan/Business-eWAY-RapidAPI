@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::ShippingAddress;
-$Business::eWAY::RapidAPI::ShippingAddress::VERSION = '0.09';
+$Business::eWAY::RapidAPI::ShippingAddress::VERSION = '0.10';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
@@ -25,7 +25,7 @@ Business::eWAY::RapidAPI::ShippingAddress
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 AUTHOR
 
