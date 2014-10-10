@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::TransactionRequest;
-$Business::eWAY::RapidAPI::TransactionRequest::VERSION = '0.08';
+$Business::eWAY::RapidAPI::TransactionRequest::VERSION = '0.09';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
@@ -49,7 +49,7 @@ Business::eWAY::RapidAPI::TransactionRequest
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 AUTHOR
 
