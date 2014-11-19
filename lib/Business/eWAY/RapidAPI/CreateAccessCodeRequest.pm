@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::CreateAccessCodeRequest;
-$Business::eWAY::RapidAPI::CreateAccessCodeRequest::VERSION = '0.10';
+$Business::eWAY::RapidAPI::CreateAccessCodeRequest::VERSION = '0.11';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
@@ -30,6 +30,8 @@ has 'ShippingAddress' => (
 );
 sub _build_ShippingAddress { Business::eWAY::RapidAPI::ShippingAddress->new }
 
+sub TO_JSON { return { %{ $_[0] } }; }
+
 no Moo;
 
 1;
@@ -46,7 +48,7 @@ Business::eWAY::RapidAPI::CreateAccessCodeRequest
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 AUTHOR
 

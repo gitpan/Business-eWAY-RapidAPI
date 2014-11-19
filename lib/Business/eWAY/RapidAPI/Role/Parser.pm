@@ -1,33 +1,28 @@
 package Business::eWAY::RapidAPI::Role::Parser;
-$Business::eWAY::RapidAPI::Role::Parser::VERSION = '0.10';
+$Business::eWAY::RapidAPI::Role::Parser::VERSION = '0.11';
 use Moo::Role;
 
-use JSON -convert_blessed_universally;
+use JSON::MaybeXS;
 use XML::Simple;
 
 sub Obj2ARRAY {
     my ( $self, $obj ) = @_;
 
-    my $json = JSON->new();
-    $json->pretty();
-    $json->allow_blessed()->convert_blessed();
+    my $json = JSON::MaybeXS->new( convert_blessed => 1 );
     return $json->decode( $json->encode($obj) );
 }
 
 sub Obj2JSON {
     my ( $self, $obj ) = @_;
 
-    my $json = JSON->new();
-    $json->pretty();
-    $json->allow_blessed()->convert_blessed();
+    my $json = JSON::MaybeXS->new( convert_blessed => 1 );
     return $json->encode($obj);
 }
 
 sub JSON2Obj {
     my ( $self, $obj ) = @_;
 
-    my $json = new JSON();
-    $json->allow_blessed()->convert_blessed();
+    my $json = JSON::MaybeXS->new( convert_blessed => 1 );
     return $json->decode($obj);
 }
 
@@ -76,7 +71,7 @@ Business::eWAY::RapidAPI::Role::Parser
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 AUTHOR
 

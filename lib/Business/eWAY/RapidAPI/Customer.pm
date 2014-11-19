@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::Customer;
-$Business::eWAY::RapidAPI::Customer::VERSION = '0.10';
+$Business::eWAY::RapidAPI::Customer::VERSION = '0.11';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
@@ -10,6 +10,8 @@ has $_ => ( is => 'rw', isa => Str ) foreach (
     'Country',         'Email',       'Phone',          'Mobile',
     'Comments',        'Fax',         'Url'
 );
+
+sub TO_JSON { return { %{ $_[0] } }; }
 
 no Moo;
 
@@ -27,7 +29,7 @@ Business::eWAY::RapidAPI::Customer
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 AUTHOR
 

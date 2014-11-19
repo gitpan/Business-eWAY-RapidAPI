@@ -2,7 +2,7 @@ NAME
     Business::eWAY::RapidAPI - eWAY RapidAPI V3
 
 VERSION
-    version 0.10
+    version 0.11
 
 SYNOPSIS
         use Business::eWAY::RapidAPI;

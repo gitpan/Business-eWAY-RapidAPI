@@ -4,7 +4,7 @@
       "Fayland Lam <fayland@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.014, CPAN::Meta::Converter version 2.133380",
+   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142690",
    "license" : [
       "perl_5"
    ],
@@ -16,7 +16,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.30"
+            "ExtUtils::MakeMaker" : "0"
          }
       },
       "develop" : {
@@ -29,7 +29,7 @@
       "runtime" : {
          "requires" : {
             "IO::Socket::SSL" : "0",
-            "JSON" : "0",
+            "JSON::MaybeXS" : "0",
             "Moo" : "0",
             "MooX::Types::MooseLike" : "0",
             "WWW::Mechanize" : "0",
@@ -53,6 +53,6 @@
          "web" : "https://github.com/fayland/p5-Business-eWAY-RapidAPI"
       }
    },
-   "version" : "0.10"
+   "version" : "0.11"
 }
 

@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::Items;
-$Business::eWAY::RapidAPI::Items::VERSION = '0.10';
+$Business::eWAY::RapidAPI::Items::VERSION = '0.11';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
@@ -8,6 +8,8 @@ has 'LineItem' => (
     isa => ArrayRef [ InstanceOf ['Business::eWAY::RapidAPI::LineItem'] ],
     default => sub { [] }
 );
+
+sub TO_JSON { return { %{ $_[0] } }; }
 
 no Moo;
 
@@ -19,6 +21,8 @@ use MooX::Types::MooseLike::Base qw(:all);
 
 has $_ => ( is => 'rw', isa => Str )
   foreach ( 'SKU', 'Description', 'Quantity', 'UnitCost', 'Tax', 'Total' );
+
+sub TO_JSON { return { %{ $_[0] } }; }
 
 no Moo;
 
@@ -36,7 +40,7 @@ Business::eWAY::RapidAPI::Items
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 AUTHOR
 

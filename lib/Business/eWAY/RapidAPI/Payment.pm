@@ -1,5 +1,5 @@
 package Business::eWAY::RapidAPI::Payment;
-$Business::eWAY::RapidAPI::Payment::VERSION = '0.10';
+$Business::eWAY::RapidAPI::Payment::VERSION = '0.11';
 use Moo;
 use MooX::Types::MooseLike::Base qw(:all);
 
@@ -7,6 +7,8 @@ has $_ => ( is => 'rw', isa => Str ) foreach (
     'TotalAmount',      'InvoiceNumber', 'InvoiceDescription',
     'InvoiceReference', 'CurrencyCode'
 );
+
+sub TO_JSON { return { %{ $_[0] } }; }
 
 no Moo;
 
@@ -24,7 +26,7 @@ Business::eWAY::RapidAPI::Payment
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 AUTHOR
 
